@@ -1,0 +1,88 @@
+<div class="story">
+    <img src="{{MEDIA}}Prisoner_of_Benda_Theorem_on_Chalkboard.png"
+         style="float: left; margin: 0 10px 0 10px;"
+         width="300px"/>
+
+    <div style="padding: 10px">
+        <p>
+            - Oh non ! Est-il possible que tout le monde redevienne normal en utilisant quatre corps ou plus ?
+        </p>
+
+        <p>
+            - Je n'en suis pas sûr. J'ai bien peur que nous devions utiliser...
+            <strong><a href="http://en.wikipedia.org/wiki/The_Prisoner_of_Benda#The_theorem"> des MATHS !</a></strong>.
+        </p>
+
+        <p style="float: right; font-style: normal; font-size: 12px">"Futurama" - Season 6 Episode 10 - "The Prisoner of
+            Benda"</p>
+    </div>
+    <div style="clear: both"></div>
+
+</div>
+
+<p>
+    Les drones de Sophia sont de simples robots auxquels on ne confie aucun travail dangereux.
+    Simplement en cas de panne, Sophia a une machine de sauvegarde pour ces drones.
+    Cette machine peut copier la mémoire d'un robot à l'aide d'une fonction secrète sans documentation.
+    Cette machine de sauvegarde peut aussi servir à échanger la mémoire de deux robots.
+</p>
+<p>
+    Mais Sophia a oublié d'éteindre cette machine, et a laissé les robots seuls avec elle...
+    Quand Sophia est revenue, certains drones avaient déjà échangé leur mémoire entre eux !
+    Il nous faut les aider à retrouver leur corps d'origine (sinon, ils ne seront plus sous garantie).
+</p>
+
+<p>
+    La machine a gardé une trace de tous les échanges de mémoire effectués : le journal.
+    Il y a néanmoins un problème supplémentaire : les mémoires peuvent être échangées entre deux corps de drones
+    AU PLUS UNE FOIS.
+    Cependant, en rajoutant deux drones supplémentaires, tout ce chaos peut être remis en ordre.
+    Nikola et Sophia se sont proposés de nous aider en prêtant leur propre drone ("nikola" et "sophia").
+</p>
+<p>
+    Vous disposez d'un journal (list of sets) contenant les informations sur les échanges récents.
+    Chaque entrée est un ensemble (set) de deux noms (string) de robots (les corps).
+    Vous pouvez agir sur les corps dont les noms figurent dans les données, ainsi que sur deux corps supplémentaires :  
+    "nikola" et "sophia".
+    Trouvez une suite d'échanges de mémoires qui permette de rendre à chaque corps sa mémoire d'origine.
+    Le résultat sera représenté par une liste/tuple d'ensembles de deux noms (string) chacun.
+</p>
+
+<p>
+    <strong>Input: </strong> Un journal, comme tuple d'ensembles (set). 
+    Chaque ensemble (set) contient deux noms de drones (string).
+</p>
+
+<p>
+    <strong>Output: </strong>La suite des échanges à effectuer, comme list/tuple d'ensembles (set). 
+    Chaque ensemble (set) contient deux noms de drones (string).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+    <pre class="brush: python">
+mind_switcher(({"scout", "super"},)) == ({"super", "nikola"}, {"sophia", "scout"},
+                                         {"nikola", "scout"}, {"sophia", "super"},
+                                         {"nikola", "sophia"})
+
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Application: </strong>
+    Pour cette mission, on utilise un très joli théorème mathématique de théorie des groupes.
+    La théorie des groupes a des applications en cryptographie, physique et chimie.
+</p>
+
+<p>
+    <strong>Préconditions:</strong><br>
+    0 &lt; len(journal) &le; 55<br>
+    La donnée <strong>journal</strong> est correcte.
+</p>
+<p>
+    <strong>Sources:</strong>
+    Cohen, David (2010). Futurama volume 5 DVD episode 10 "The Prisoner of Benda" (DVD). 20th Century Fox.
+</p>
